@@ -45,7 +45,7 @@ void main()
 	stream.ReadAllData();
 
 	Mat sampleFrame1 = stream.Frames[14000];
-	Mat sampleFrame2 = stream.Frames[14010];
+	Mat sampleFrame2 = stream.Frames[14005];
 
 	EdgeDetector edgeDetector;
 	Mat edgeResult1 = edgeDetector.PerformEdgeDetection(sampleFrame1);
@@ -59,8 +59,8 @@ void main()
 	//waitKey(0);
 
 	TemplateMatching templateMatching;
-	Mat result = templateMatching.PerformMatching(edgeResult1, edgeResult2);
+	auto result = templateMatching.PerformMatching(edgeResult1, edgeResult2);
 	namedWindow("Test1", WINDOW_KEEPRATIO);
-	imshow("Test1", result);
+	imshow("Test1", result.CorrelationMatrix);
 	waitKey(0);
 }

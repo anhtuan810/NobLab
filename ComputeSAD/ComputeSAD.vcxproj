@@ -74,6 +74,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SAD_DLL.cpp" />
     <ClCompile Include="TemplateMatching.cpp" />
+    <ClCompile Include="TemplateMatchingResult.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constants.h" />
@@ -81,6 +82,7 @@
     <ClInclude Include="SAD_DLL.h" />
     <ClInclude Include="DataStream.h" />
     <ClInclude Include="TemplateMatching.h" />
+    <ClInclude Include="TemplateMatchingResult.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

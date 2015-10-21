@@ -45,6 +45,9 @@
     <ClCompile Include="TemplateMatching.cpp">
       <Filter>Source Files\ImageProcessing</Filter>
     </ClCompile>
+    <ClCompile Include="TemplateMatchingResult.cpp">
+      <Filter>Source Files\ImageProcessing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SAD_DLL.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files\Common</Filter>
     </ClInclude>
     <ClInclude Include="TemplateMatching.h">
+      <Filter>Header Files\ImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateMatchingResult.h">
       <Filter>Header Files\ImageProcessing</Filter>
     </ClInclude>
   </ItemGroup>

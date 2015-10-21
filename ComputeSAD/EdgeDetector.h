@@ -1,3 +1,6 @@
+#ifndef EDGEDETECTOR_H_
+#define EDGEDETECTOR_H_
+
 #include "opencv2/core/core.hpp"
 
 class EdgeDetector
@@ -13,3 +16,6 @@ private:
 	cv::Mat PerformLaplacianEdgeDetection(cv::Mat inputFrame);
 	cv::Mat PerformCannyEdgeDetection(cv::Mat inputFrame);
 };
+
+
+#endif

@@ -1,5 +1,6 @@
 #ifndef DATASTREAM_H_
 #define DATASTREAM_H_
+
 #include "opencv2/core.hpp"
 
 class DataStream

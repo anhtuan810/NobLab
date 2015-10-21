@@ -12,33 +12,42 @@ TemplateMatching::~TemplateMatching()
 {
 }
 
-cv::Mat TemplateMatching::PerformMatching(cv::Mat image, cv::Mat temp)
+TemplateMatchingResult TemplateMatching::PerformMatching(Mat image, Mat temp)
 {
-	_img = image;
-	_temp = temp;
+	Mat imgWithBorder = AddBorderToImage(image);
 
+	Mat correlationMatrix = MatchTemplateWithBorderImg(imgWithBorder, temp);
+	
+	return FindOffsetFromCorrMatrix(correlationMatrix);
+}
+
+cv::Mat TemplateMatching::AddBorderToImage(cv::Mat image)
+{
 	int borderH = Constants::FRAME_HEIGHT - 1;
 	int borderW = Constants::FRAME_WIDTH - 1;
 	Mat newImg(image.rows + borderH * 2, image.cols + borderW * 2, image.depth());
 	copyMakeBorder(image, newImg, borderH, borderH, borderW, borderW, BORDER_CONSTANT, 0);
 
-	
-	
-	Mat matchingResult;
-	matchTemplate(newImg, temp, matchingResult, CV_TM_CCORR_NORMED);
+	return newImg;
+}
 
-	
-	
+Mat TemplateMatching::MatchTemplateWithBorderImg(cv::Mat image, cv::Mat temp)
+{
+	Mat corrMatrix;
+	matchTemplate(image, temp, corrMatrix, CV_TM_CCORR_NORMED);
+	return corrMatrix;
+}
+
+TemplateMatchingResult TemplateMatching::FindOffsetFromCorrMatrix(Mat corrMatrix)
+{
 	double minVal; double maxVal; Point minLoc; Point maxLoc;
-	Point matchLoc;
-	minMaxLoc(matchingResult, &minVal, &maxVal, &minLoc, &maxLoc, Mat());
-
-
+	minMaxLoc(corrMatrix, &minVal, &maxVal, &minLoc, &maxLoc, Mat());
 
 	int offsetW, offsetH;
-	offsetW = borderW - maxLoc.x;
-	offsetH = borderH - maxLoc.y;
+	offsetW = Constants::FRAME_WIDTH - 1 - maxLoc.x;
+	offsetH = Constants::FRAME_HEIGHT - 1 - maxLoc.y;
 
+	TemplateMatchingResult result(offsetW, offsetH, corrMatrix, maxVal);
 
-	return matchingResult;
+	return result;
 }
