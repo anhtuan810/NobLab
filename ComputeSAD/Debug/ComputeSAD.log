@@ -1,0 +1,17 @@
+﻿Build started 10/21/2015 3:35:15 PM.
+     1>Project "C:\WORKPLACE\Development\UnconstrainedRobot\ComputeSAD\ComputeSAD.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\opencv\build\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\Output\bin\x86\ComputeSAD.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\opencv\build\x86\vc12\lib opencv_ts300d.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\Output\bin\x86\ComputeSAD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\Output\bin\x86\ComputeSAD.lib" /MACHINE:X86 Debug\DataStream.obj
+         Debug\EdgeDetector.obj
+         Debug\main.obj
+         Debug\SAD_DLL.obj
+         Debug\TemplateMatching.obj
+         ComputeSAD.vcxproj -> C:\WORKPLACE\Development\UnconstrainedRobot\ComputeSAD\..\Output\bin\x86\ComputeSAD.exe
+     1>Done Building Project "C:\WORKPLACE\Development\UnconstrainedRobot\ComputeSAD\ComputeSAD.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.37
