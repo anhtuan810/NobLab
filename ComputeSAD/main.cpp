@@ -6,40 +6,15 @@
 #include "DataStream.h"
 #include "EdgeDetector.h"
 #include "TemplateMatching.h"
+#include "TemplateMatchingTester.h"
 
 using namespace std;
 using namespace cv;
 
 void main()
 {
-	//Mat img;
-	//img = imread("C:\\test.png");
-	//namedWindow("Test");
-	//imshow("Test", img);
-	//waitKey();
-
-	char* fileName = "C:\\WORKPLACE\\SampleData_15m\\7_forward_slow_ok\\vid1.bin";
-
-	//ifstream stream;
-	//char* rawData;
-
-	//stream.open(fileName, ios::in | ios::binary | ios::ate);
-	//long begin = 0;
-	//long end = 0;
-	//if (stream.is_open())
-	//{
-	//	begin = stream.tellg();
-	//	rawData = new char[begin];
-	//	stream.seekg(0, ios::end);
-	//	stream.read(rawData, begin);
-	//	end = stream.tellg();
-	//}
-	//
-	//stream.close();
-
-	//long size = begin / (84 * 162);
-
-	//cout << size;
+	char* fileName = "C:\\WORKPLACE\\SampleData_15m\\8_backward_slow_ok\\vid2.bin";
+/*
 
 	DataStream stream(fileName);
 	stream.ReadAllData();
@@ -51,16 +26,15 @@ void main()
 	Mat edgeResult1 = edgeDetector.PerformEdgeDetection(sampleFrame1);
 	Mat edgeResult2 = edgeDetector.PerformEdgeDetection(sampleFrame2);
 
-	//namedWindow("Test1", WINDOW_KEEPRATIO);
-	//imshow("Test1", edgeResult1);
-
-	//namedWindow("Test2", WINDOW_KEEPRATIO);
-	//imshow("Test2", edgeResult2);
-	//waitKey(0);
-
 	TemplateMatching templateMatching;
 	auto result = templateMatching.PerformMatching(edgeResult1, edgeResult2);
 	namedWindow("Test1", WINDOW_KEEPRATIO);
 	imshow("Test1", result.CorrelationMatrix);
-	waitKey(0);
+	waitKey(0);*/
+
+
+	TemplateMatchingTester tester;
+	tester.Test(fileName);
+	
+
 }

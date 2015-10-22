@@ -28,6 +28,12 @@
     <Filter Include="Header Files\Common">
       <UniqueIdentifier>{c6252f19-b25c-4c5d-a7d8-895b9a236e30}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Testing">
+      <UniqueIdentifier>{42996e0b-3231-4e70-b4ae-ac421dd4a38c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Testing">
+      <UniqueIdentifier>{977a0b10-91e6-4114-bb94-d80e4ff86c7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +54,9 @@
     <ClCompile Include="TemplateMatchingResult.cpp">
       <Filter>Source Files\ImageProcessing</Filter>
     </ClCompile>
+    <ClCompile Include="TemplateMatchingTester.cpp">
+      <Filter>Source Files\Testing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SAD_DLL.h">
@@ -67,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="TemplateMatchingResult.h">
       <Filter>Header Files\ImageProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateMatchingTester.h">
+      <Filter>Header Files\Testing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

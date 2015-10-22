@@ -13,5 +13,5 @@ TemplateMatchingResult::TemplateMatchingResult(int offsetX, int offsetY, cv::Mat
 	OffsetX = offsetX;
 	OffsetY = offsetY;
 	CorrelationMatrix = corrMatrix;
-	MaxCorrelationValue = MaxCorrelationValue;
+	MaxCorrelationValue = maxCorrValue;
 }
